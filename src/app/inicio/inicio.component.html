@@ -1,0 +1,15 @@
+<mat-accordion *ngFor="let car of cars">
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+            {{car.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        Más info
+      </mat-panel-description>
+    </mat-expansion-panel-header>      
+      <h2> El dueño es  "{{car.owner}}" </h2>
+     <img mat-list-avatar src="{{car.giphyUrl}}">
+  </mat-expansion-panel>
+</mat-accordion>
