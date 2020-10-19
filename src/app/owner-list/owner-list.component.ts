@@ -102,12 +102,15 @@ export class OwnerListComponent implements OnInit {
   
   remove() {
     this.ownersToDelete.forEach(element => {
-      
-      console.log(element["_links"]["owner"]["href"]);
       this.ownerService.remove(element["_links"]["owner"]["href"]).subscribe(result => {
-        console.log("eliminado");
-        
-        this.refreshPage();
+        this.cars.forEach(auto=>{
+          if (element["dni"]==auto["ownerDni"]){
+            this.carService.get(auto.id).subscribe((car: any) => {
+              car["ownerDni"] = "Eliminado";
+              this.carService.save(car["_links"]["self"]).subscribe();
+            });
+          };
+        });
       }, error => console.error(error));
       
     })
