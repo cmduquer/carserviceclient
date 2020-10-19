@@ -18,12 +18,6 @@ export class CarService {
     return this.http.get(this.CAR_API + '/' + id);
   }
 
-  updateOwner(car: any): Observable<any>{
-    console.log("ejecuté el update");
-    car.ownerDni = "Eliminado"
-    return this.http.put(car.href, car);
-  }
-
   save(car: any): Observable<any> {
     let result: Observable<Object>;
     if (car['href']) {
