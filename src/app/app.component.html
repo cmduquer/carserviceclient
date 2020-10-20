@@ -1,5 +1,23 @@
-<mat-toolbar color="primary">
-  <span>Welcome to {{title}}!</span>
+<mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{title}}</span>
+  <span class="example-spacer"></span>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item onclick="window.location.href='/'">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-menu-item onclick="window.location.href='/owner-list'">
+      <mat-icon >person</mat-icon>
+      <span>Owners</span>
+    </button>
+    <button mat-menu-item onclick="window.location.href='/car-list'">
+      <mat-icon>widgets</mat-icon>
+      <span>Cars</span>
+    </button>
+  </mat-menu>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

@@ -1,3 +1,41 @@
+# Trabajo Angular -- Ingeniería Web 2020-01 -- Jhon Vásquez
+
+Se han hecho modificaciones a los componenes ya existentes en el proyecto base (al cuál le hice fork) y se han creado otros. Los componentes que creé son:
+
+- owner-list.component
+
+- owner-edit.component
+
+- inicio.component
+
+Donde los dos primeros sirven para mostrar y editar la información referente a los propietarios de los carros. El inicio.component se ha creado para que sea la página de inicio y sea allí donde se muestra los carros con sus respectivos propietarios.
+
+Además, se ha creado el servicio "owner.service", el cuál nos permite hacer las diferentes consultas a la API de "owners". Se le ha agregado un método al servicio "car.service" para hacer actualizaciones a los carros.
+
+De la página de material.angular.io se han usado cinco componentes que son: una tabla, botón, panel expansivo, un menú y una toolbar. A continuación dejo los lins de lo que usé.
+
+- https://material.angular.io/components/menu/overview
+
+- https://material.angular.io/components/button/overview
+
+- https://material.angular.io/components/table/overview
+
+- https://material.angular.io/components/toolbar/overview
+
+- https://material.angular.io/components/expansion/overview
+
+
+La tabla se ha usado para mostrar los propietarios en el componente "owner-list" y en ese mismo componente se han agregado dos botones, los cuales sirven para agregar y borrar a los propietarios. Se pueden seleccionar varios propietarios en la tabla para borrar. Además, la tabla contiene un botón por cada propietario que nos permite modificarlo.
+
+
+
+
+
+
+
+
+
+
 # CarServiceClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
