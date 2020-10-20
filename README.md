@@ -10,7 +10,7 @@ Se han hecho modificaciones a los componenes ya existentes en el proyecto base (
 
 Donde los dos primeros sirven para mostrar y editar la información referente a los propietarios de los carros. El inicio.component se ha creado para que sea la página de inicio y sea allí donde se muestra los carros con sus respectivos propietarios.
 
-Además, se ha creado el servicio "owner.service", el cuál nos permite hacer las diferentes consultas a la API de "owners".
+Además, se ha creado el servicio "owner.service", el cuál nos permite hacer las diferentes consultas a la API de "owners". Se le ha agregado un método al servicio "car.service" para hacer actualizaciones a los carros.
 
 De la página de material.angular.io se han usado cinco componentes que son: una tabla, botón, panel expansivo, un menú y una toolbar. A continuación dejo los lins de lo que usé.
 
