@@ -106,15 +106,17 @@ export class OwnerListComponent implements OnInit {
         this.cars.forEach(auto=>{
           if (element["dni"]==auto["ownerDni"]){
             this.carService.get(auto.id).subscribe((car: any) => {
-              car["ownerDni"] = "Eliminado";
-              this.carService.save(car["_links"]["self"]).subscribe();
+              car["ownerDni"]= "se ha eliminado";
+              this.carService.updateCar(car, car["_links"]["self"]).subscribe(result =>{
+                this.refreshPage();
+              });
+              
             });
           };
         });
       }, error => console.error(error));
       
     })
-   
   }
 }
 

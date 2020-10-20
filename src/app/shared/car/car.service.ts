@@ -18,6 +18,17 @@ export class CarService {
     return this.http.get(this.CAR_API + '/' + id);
   }
 
+  updateCar(car: any, link:any): Observable<any> {
+    let result: Observable<Object>;
+    if (link['href']) {
+      result = this.http.put(link.href, car);
+    } else {
+      result = this.http.post(this.CAR_API, car);
+    }
+    return result;
+  }
+
+
   save(car: any): Observable<any> {
     let result: Observable<Object>;
     if (car['href']) {
